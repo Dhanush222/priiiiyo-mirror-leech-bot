@@ -53,8 +53,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/PriiiiyoDevs/priiiiyo-mirror-leech-bot")
-    buttons.buildbutton("Channel", "https://t.me/PriiiiyoMirrorUpdates")
+    buttons.buildbutton("Owner", "@DI_TWA")
+    buttons.buildbutton("Channel", "https://t.me/BeastCloudOfficial")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -64,7 +64,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.\nPlease deploy your own <b>priiiiyo-mirror-leech-bot</b>.',
+            'Oops! not a Authorized user.\nPlease deploy your own <b>BeastCloud-mirror-leech-bot</b>.',
             context.bot,
             update,
             reply_markup,
@@ -156,9 +156,9 @@ help_string_telegraph = f'''<br>
 <b>/{BotCommands.StatsCommand}</b>: Show Stats of the machine the bot is hosted on
 '''
 help = Telegraph(access_token=telegraph_token).create_page(
-        title='Priiiiyo Mirror Leech Help',
-        author_name='Priiiiyo Mirror Leech',
-        author_url='https://github.com/PriiiiyoDevs/priiiiyo-mirror-leech-bot',
+        title='BeastCloud',
+        author_name='DI_TWA',
+        author_url='https://github.com/Dhanush222/priiiiyo-mirror-leech-bot',
         html_content=help_string_telegraph,
     )["path"]
 
